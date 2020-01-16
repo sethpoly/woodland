@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Woodland</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+  </head>  
+  <body>
+  
+  <header>
+    <div id="navBar">
+        <span id="slideMenuBtn" onclick="openNav()">&#9776; 
+        Categories</span>  
+    <button id='loginNav' type="button">Log in &#8595;</button>    
+<!--
+   
+<form id="registerForm">  
+        <input id="regEmail" type="text" placeholder="Email">
+        <input id="regPassword" type="password" placeholder="Password">
+        <input value="Register" type="submit">
+     </form>
+-->
+    </div>
+      
+    <div id="loginContainer">
+        <form id="loginForm">
+            <input id="loginEmail" type="email" placeholder="Email">
+            <input id="loginPassword" type="password" placeholder="Password">
+            <input id="loginSubmit" type="submit" value="Log in">
+        </form>
+        
+        <div id="ifNewDiv">
+            <button id="registerHrefBtn">Sign-up</button>
+        </div>
+    </div>
+    
+    <div id="loginContainer">
+        <form id="registerForm">
+            <input id="registerEmail" type="email" placeholder="Email">
+            <input id="registerPassword" type="password" placeholder="Password">
+             <input id="registerUsername" type="text" placeholder="Username">
+            <p>What is Sam's favorite type of cupcake?</p>
+            <input id="registerQuestion" type="text" placeholder="">
+            <input id="registerSubmit" type="submit" value="Register">
+        </form>
+        
+        <div id="ifNewDiv">
+            <button id="loginHrefBtn">Have an account? Sign-in</button>
+        </div>
+    </div>
+    <h1 id="title" href="#">Woodland Road</h1>
+  </header>
+
+   
+        <div id="categoryContainer">
+           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h2 id="categoryContainerHeader">Categories</h2>
+            
+            <input id="searchBar" type="text" placeholder="Search Categories">
+            
+            <form id="addCatForm">
+             <input id="addCatInput" pattern=".{1,15}" type="text" required placeholder="New Category" title="Max 15 characters">
+             <input id="addCatBtn" type="submit" value="Add">
+            </form>
+            
+            <div id="catList"></div>
+        </div>
+
+      <div id="main">
+
+          
+        
+       
+        <div class="headingDiv">
+          <h2 id="categoryHeader">A Random Memory</h2>
+          <h2 id="postNewMemoryHeading">Post a new memory</h2>
+        </div>
+        
+
+        <button id="logOutBtn" type="button">Logout</button>
+          
+          <div id="newMemory">
+            <form id="newMemoryForm">
+                <input id="newTitle" required type="text" placeholder="Title">
+                <input id="newDate" required type="date">
+                <textarea id="newDescription" required placeholder="Description of memory"></textarea>
+                <input id="newMemoryBtn" type="submit" value="POST">
+            </form>
+        </div>
+        
+    <hr>
+
+        
+        <div id="memoryContainer">
+<!--
+            <div class="memoryBox">
+                <h2 class="memoryTitle">Title</h2>
+                <p class="memoryDate">10/02/20</p>
+                <p class="memoryDescription">Description:Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+-->
+        </div>
+        
+    
+    
+        
+    </div>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD4mJJ9TTwf16tfK-P39KpZ8s4n9562tfQ",
+    authDomain: "woodland-6f794.firebaseapp.com",
+    databaseURL: "https://woodland-6f794.firebaseio.com",
+    projectId: "woodland-6f794",
+    storageBucket: "woodland-6f794.appspot.com",
+    messagingSenderId: "168489669833",
+    appId: "1:168489669833:web:f62b5d68cc34c4db636918",
+    measurementId: "G-18LS5MW0S2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="index.js"></script>
+</html>
