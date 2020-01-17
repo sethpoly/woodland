@@ -40,6 +40,53 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 } 
 
+// Closes register
+function closeRegister() {
+    document.getElementById('registerContainer').style.display = 'none';
+    document.getElementById('loginContainer').style.display = 'none';
+}
+
+// SIGN-IN NAV BUTTON
+// Go to login html page
+document.getElementById('loginNav').addEventListener('click', function() {
+    
+    
+    
+//    var loginScreen = document.getElementById('loginContainer');
+//
+//    // Hide register screen
+//    document.getElementById('registerContainer').style.display = 'none';
+//    // Display log-in popup if not displayed
+//    if(loginScreen.style.display == 'none' || loginScreen.style.display == "") {
+//        loginScreen.style.display = 'block';
+//    } else {
+//        loginScreen.style.display = 'none';
+//    }
+})
+
+// SIGN-UP RECOMMENDATION BUTTON
+// Display the register popup and hide the login popup
+document.getElementById('registerHrefBtn').addEventListener('click', function() {
+    var registerPopup = document.getElementById('registerContainer');
+    
+    // Hide login popup
+    document.getElementById('loginContainer').style.display = 'none';
+    
+    // Display register popup
+    registerPopup.style.display = 'block';
+})
+
+// SIGN-IN RECOMMENDATION BUTTON
+// Display the login popup and hide the register popup
+document.getElementById('loginHrefBtn').addEventListener('click', function() {
+        
+    // Hide register popup
+    document.getElementById('registerContainer').style.display = 'none';
+    
+    // Display login popup
+    document.getElementById('loginContainer').style.display = 'block';
+})
+
 // REGISTER FORM
 document.getElementById('registerForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -230,6 +277,24 @@ function snapshotToArray(snapshot) {
 
     return returnArr;
 };
+
+// Smooth scrolling
+function SmoothVerticalScrolling(e, time, where) {
+    var eTop = e.getBoundingClientRect().top;
+    var eAmt = eTop / 100;
+    var curTime = 0;
+    while (curTime <= time) {
+        window.setTimeout(SVS_B, curTime, eAmt, where);
+        curTime += time / 100;
+    }
+}
+
+function SVS_B(eAmt, where) {
+    if(where == "center" || where == "")
+        window.scrollBy(0, eAmt / 2);
+    if (where == "top")
+        window.scrollBy(0, eAmt);
+}
  
 
  

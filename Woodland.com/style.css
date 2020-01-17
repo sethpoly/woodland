@@ -4,6 +4,11 @@
     --lightgrey: #4a4949;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 #title {
     text-align: center;
     font-size: 48px;
@@ -12,7 +17,6 @@
 }
 body {
     background-color: #446b57;
-
 }
 
 hr {
@@ -22,17 +26,58 @@ hr {
     border-color: var(--lightgrey);
 }
 
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 32px;
+    margin-right: 8px;
+    cursor: pointer;
+}
 #main {
   transition: margin-left .5s;
   padding: 20px;
 /*  margin-left: 250px;*/
 }
 
-#loginContainer {
-    border: 5px solid red;
-    float: right;
-    padding: 15px;
+.basicHeader {
+    text-align: center;
 }
+
+#loginContainer {
+    display: none;
+    position: fixed;
+    right: 0;
+    margin-right: 20px;
+    border: 5px solid red;
+    padding: 15px;
+    background: linear-gradient(to bottom, white 70%, white 50%);
+}
+
+#registerContainer {
+    display: none;
+    width: 350px;
+    height: 350px;
+    
+    position:fixed; /*it can be fixed too*/
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+
+        /*this to solve "the content will not be cut when the window is smaller than the content": */
+    max-width:100%;
+    max-height:100%;
+    overflow:auto;
+    border: 5px solid red;
+    padding: 15px;
+    background: linear-gradient(to bottom, white 70%, white 50%);
+    
+    transition: opacity 2s;
+    
+    z-index: 5;
+}
+
+
 
 #loginEmail {
     display: block;
@@ -45,6 +90,99 @@ hr {
 
 #loginEmail, loginPassword {
     padding: 2px;
+}
+
+#loginSubmit {
+    margin: auto;
+    width: 80px;
+    margin-top: 10px;
+    padding: 2px;
+    display: block;
+}
+
+#ifNewDiv {
+    border: none;
+    display: block;
+}
+
+#registerHrefBtn {
+    border: none;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    color: cornflowerblue;
+    background-color: transparent;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#registerEmail, #registerPassword, #registerUsername, #registerQuestion, #loginEmail, #loginPassword {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom:  1px solid var(--lightgrey);
+    background-color: white;
+    padding: 2px;
+    outline: none;
+}
+
+#registerEmail {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#registerPassword {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#registerUsername {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.questionContainer {
+    border: 1px solid red;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+#registerQuestion {
+    display: block;
+    padding: 2px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#secretQuestion {
+    margin: auto;
+    margin-bottom: 2px;
+    word-wrap: break-word;
+    text-align: center;
+    text-align: center;
+}
+
+#registerSubmit {
+    margin: auto;
+    width: 80px;
+    margin-top: 10px;
+    padding: 2px;
+    display: block;
+}
+
+#loginHrefBtn {
+    border: none;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    color: cornflowerblue;
+    background-color: transparent;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 #logOutBtn {
@@ -297,6 +435,23 @@ hr {
         #categoryContainer {
         width: 0;
     }
+    
+    #registerContainer {
+        width: 250px;
+    }
+    
+/*
+    #loginContainer {
+        width: 200px; height: 250px;
+        position:fixed; it can be fixed too
+        left:0; right:0;
+        top:0; bottom:0;
+        margin:auto;
+        max-width:100%;
+        max-height:100%;
+        overflow:auto;                   
+    }
+*/
 }
 
 @media only screen and (min-width: 600px) {
