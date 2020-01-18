@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Woodland</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/login.css">
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    </head>
+    
+    <header>
+        <a class="closeButton" href="index.html">&times;</a>
+    </header>
+    
+    <body>
+        <div class=".container">
+            <div id="infoDiv">
+                <img class="loginPhoto" src="pool.jpg" alt="Boys in the pool">
+            </div>
+            
+    <div id="loginDiv">
+        <div id="registerContainer">
+            <h2 class="basicHeader">CREATE YOUR ACCOUNT</h2>
+            <h3 class="subHeading">So you can post your own Woodland memories</h3>
+            <form id="registerForm">
+                <input id="registerUsername" required type="text" placeholder="Username">
+                <input id="registerEmail" required type="email" placeholder="Email">
+                <input id="registerPassword" required type="password" placeholder="Password">
+                <div class="questionContainer">
+                    <p id="secretQuestion">What is Sam's favorite type of cupcake?</p>
+                    <input id="registerQuestion" required type="text" placeholder="Type of cupcake">
+                </div>
+                <input id="registerSubmit" type="submit" value="SIGN UP">
+            </form>
+
+            <div id="ifNewDiv">
+                <button id="loginHrefBtn">Have an account? Sign-in</button>
+            </div>
+        </div>
+        
+        <div id="loginContainer">
+             <h2 class="basicHeader">WELCOME BACK</h2>
+             <h3 class="subHeading">Please sign in to continue</h3>
+            <form id="loginForm">
+                <input id="loginEmail" required type="email" placeholder="Email">
+                <input id="loginPassword" required type="password" placeholder="Password">
+                <input id="loginSubmit" type="submit" value="SIGN IN">
+            </form>
+
+            <div id="ifNewDiv">
+                <button id="registerHrefBtn">Don't have an account? Sign-up</button>
+            </div>
+        </div>       
+    
+    </div>
+        </div>
+        
+        
+        
+        
+        
+    
+    </body>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD4mJJ9TTwf16tfK-P39KpZ8s4n9562tfQ",
+    authDomain: "woodland-6f794.firebaseapp.com",
+    databaseURL: "https://woodland-6f794.firebaseio.com",
+    projectId: "woodland-6f794",
+    storageBucket: "woodland-6f794.appspot.com",
+    messagingSenderId: "168489669833",
+    appId: "1:168489669833:web:f62b5d68cc34c4db636918",
+    measurementId: "G-18LS5MW0S2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="login.js"></script>
+</html>

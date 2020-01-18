@@ -1,0 +1,194 @@
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.basicHeader {
+    text-align: center;
+    font-size: 34px;
+    width: 100%;
+}
+
+.loginPhoto {
+    width: 100%;
+    height: auto;
+}
+
+.subHeading {
+    text-align: center;
+    font-weight: 100;
+    margin-top: -25px;
+}
+
+.closeButton {
+    position: absolute;
+    font-size: 36px;
+    text-decoration: none;
+    color: #000;
+    right: 0px;
+    margin-right: 12px;
+}
+
+#infoDiv {
+    width: 40%;
+    height: 100vh;
+    background-color: goldenrod;
+    float: left;
+}
+
+#loginDiv {
+    width: 60%;
+    height: 100vh;
+    background-color: blue;
+    float: left;
+}
+
+#registerContainer {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top:100px;
+    padding: 15px;
+    background-color: white;
+    display: none;
+}
+
+#registerEmail, #registerPassword, #registerUsername, #registerQuestion, #loginEmail, #loginPassword {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom:  1px solid gray;
+    background-color: white;
+    padding: 5px;
+    outline: none;
+    width: 70%;
+    font-size: 24px;
+}
+
+#registerEmail, #loginEmail {
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#registerPassword, #loginPassword {
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+#registerUsername {
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.questionContainer {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 60px;
+    width: 70%;
+}
+
+#registerQuestion {
+    display: block;
+    font-size: 20px;
+    padding: 2px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#secretQuestion {
+    margin: auto;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 24px;
+}
+
+#registerSubmit, #loginSubmit {
+    margin: auto;
+    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 10px;
+    display: block;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+#loginHrefBtn {
+    border: none;
+    margin: auto;
+    display: block;
+    color: cornflowerblue;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#loginContainer {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top:100px;
+    padding: 15px;
+    background-color: white;
+}
+
+#registerHrefBtn {
+    border: none;
+    margin: auto;
+    display: block;
+    color: cornflowerblue;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 570px) {
+    #infoDiv {
+        display: none;
+    }
+
+    #loginDiv {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    #registerContainer, #loginContainer {
+        margin-top: 5px;
+    }
+    
+    #registerEmail, #registerUsername, #registerPassword, #registerQuestion, #loginEmail, #loginPassword {
+        font-size: 16px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    
+    .questionContainer {
+        margin-top: 30px;
+    }
+    
+    #secretQuestion {
+        font-size: 18px;
+    }
+
+    .basicHeader {
+        font-size: 24px;
+    }
+    
+    .subHeading {
+        font-size: 15px;
+        margin-top: -20px;
+    }
+
+}

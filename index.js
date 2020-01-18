@@ -9,15 +9,38 @@ window.addEventListener('load', function() {
     getCategories();
 })
 
+// GO TO LOGIN PAGE
+function loginPage() {
+    window.location.href = 'login.html';
+    console.log('Try to login page');
+}
+
+// LOG USER OUT
+function logOut() {
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+    }).catch(function(error) {
+      // An error happened.
+    });
+}
+
 // ON AUTH STATE CHANGE
 firebase.auth().onAuthStateChanged(function(user) {
 if (user) {
     console.log('user signed in');
-    document.getElementById('logOutBtn').style.display = 'block';
+    
+    // Change nav bar lettering
+    document.getElementById('loginNav').value = "SIGN OUT";
+    
+    // Change login onClick event
+    document.getElementById('loginNav').setAttribute( "onClick", "logOut()" );
 } else {
   // No user is signed in.
     console.log('user not signed in');
-    document.getElementById('logOutBtn').style.display = 'none';
+    document.getElementById('loginNav').value = 'LOG IN';
+    
+    // Change login onClick event to sign in page
+    document.getElementById('loginNav').setAttribute( "onClick", "loginPage()" );
 }
 });
 
@@ -30,7 +53,7 @@ function openNav() {
       document.getElementById("categoryContainer").style.width = "200px";
     } else {
       document.getElementById("categoryContainer").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
+//      document.getElementById("main").style.marginLeft = "250px";
     }
 }
 
@@ -40,19 +63,33 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 } 
 
-// REGISTER FORM
-document.getElementById('registerForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Retrieve inputted register details
-    let email = document.getElementById('regEmail').value;
-    let password = document.getElementById('regPassword').value;
-    
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        console.log(error.message);
-    });
-    
-})
+// Closes register
+function closeRegister() {
+    document.getElementById('registerContainer').style.display = 'none';
+    document.getElementById('loginContainer').style.display = 'none';
+}
+
+
+
+// SIGN-IN NAV BUTTON
+// Go to login html page
+//document.getElementById('loginNav').addEventListener('click', function() {
+//    
+//    
+//    
+////    var loginScreen = document.getElementById('loginContainer');
+////
+////    // Hide register screen
+////    document.getElementById('registerContainer').style.display = 'none';
+////    // Display log-in popup if not displayed
+////    if(loginScreen.style.display == 'none' || loginScreen.style.display == "") {
+////        loginScreen.style.display = 'block';
+////    } else {
+////        loginScreen.style.display = 'none';
+////    }
+//})
+
+
 
 // LOGOUT BUTTON
 document.getElementById('logOutBtn').addEventListener('click', function() {
@@ -230,6 +267,24 @@ function snapshotToArray(snapshot) {
 
     return returnArr;
 };
+
+// Smooth scrolling
+function SmoothVerticalScrolling(e, time, where) {
+    var eTop = e.getBoundingClientRect().top;
+    var eAmt = eTop / 100;
+    var curTime = 0;
+    while (curTime <= time) {
+        window.setTimeout(SVS_B, curTime, eAmt, where);
+        curTime += time / 100;
+    }
+}
+
+function SVS_B(eAmt, where) {
+    if(where == "center" || where == "")
+        window.scrollBy(0, eAmt / 2);
+    if (where == "top")
+        window.scrollBy(0, eAmt);
+}
  
 
  

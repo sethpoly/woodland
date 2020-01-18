@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="/style.css">
      <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
   </head>  
-  <body>
   
   <header>
     <div id="navBar">
         <span id="slideMenuBtn" onclick="openNav()">&#9776; 
-        Categories</span>  
-    <button id='loginNav' type="button">Log in &#8595;</button>    
+        MEMORIES</span>  
+        <input id='loginNav' type="button" onclick='loginPage()' value="">   
 <!--
    
 <form id="registerForm">  
@@ -26,7 +25,10 @@
 -->
     </div>
       
+<!--
     <div id="loginContainer">
+        <a class="closeButton" onclick=closeRegister()>&times;</a>
+         <h2 class="basicHeader">Log in</h2>
         <form id="loginForm">
             <input id="loginEmail" type="email" placeholder="Email">
             <input id="loginPassword" type="password" placeholder="Password">
@@ -37,28 +39,40 @@
             <button id="registerHrefBtn">Sign-up</button>
         </div>
     </div>
-    
-    <div id="loginContainer">
+-->
+<!--
+        <div id="registerContainer">
+            <a class="closeButton" onclick=closeRegister()>&times;</a>
+        <h2 class="basicHeader">Make an account to post memories</h2>
         <form id="registerForm">
+            <input id="registerUsername" type="text" placeholder="Username">
             <input id="registerEmail" type="email" placeholder="Email">
             <input id="registerPassword" type="password" placeholder="Password">
-             <input id="registerUsername" type="text" placeholder="Username">
-            <p>What is Sam's favorite type of cupcake?</p>
-            <input id="registerQuestion" type="text" placeholder="">
+            <div class="questionContainer">
+                <p id="secretQuestion">What is Sam's favorite type of cupcake?</p>
+                <input id="registerQuestion" type="text" placeholder="Type of cupcake">
+            </div>
             <input id="registerSubmit" type="submit" value="Register">
         </form>
-        
+
         <div id="ifNewDiv">
             <button id="loginHrefBtn">Have an account? Sign-in</button>
         </div>
     </div>
-    <h1 id="title" href="#">Woodland Road</h1>
-  </header>
+-->
+</header>
+
+    <body>
+
+      
+      
+      <h1 id="title" href="#">Woodland Road</h1>
+  
 
    
         <div id="categoryContainer">
            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <h2 id="categoryContainerHeader">Categories</h2>
+            <h2 id="categoryContainerHeader">Memories</h2>
             
             <input id="searchBar" type="text" placeholder="Search Categories">
             
