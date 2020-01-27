@@ -10,28 +10,32 @@
     </head>
     
     <header>
-        <a class="closeButton" href="index.html">&times;</a>
+        <a class="closeButton" href="home.html">&times;</a>
     </header>
     
     <body>
         <div class=".container">
             <div id="infoDiv">
-                <img class="loginPhoto" src="pool.jpg" alt="Boys in the pool">
+               <h1 class="infoHeader">A place to share <span class="keyword">memories.</span> </h1>
+                <ul class="catchPhraseList">
+                    <li class="catchPhrase">Create</li>
+                    <li class="catchPhrase">Reminisce</li>
+                    <li class="catchPhrase">Connect.</li>
+                </ul>
             </div>
             
     <div id="loginDiv">
         <div id="registerContainer">
-            <h2 class="basicHeader">CREATE YOUR ACCOUNT</h2>
-            <h3 class="subHeading">So you can post your own Woodland memories</h3>
+            <h2 class="basicHeader">Create an account</h2>
+            <h3 class="subHeading">So you can share your own memories</h3>
             <form id="registerForm">
-                <input id="registerUsername" required type="text" placeholder="Username">
+                <input id="registerFirstname" class="inputField" required type="text" placeholder="First name">
+                <input id="registerLastname" class="inputField" required type="text" placeholder="Last name">                
+
                 <input id="registerEmail" required type="email" placeholder="Email">
                 <input id="registerPassword" required type="password" placeholder="Password">
-                <div class="questionContainer">
-                    <p id="secretQuestion">What is Sam's favorite type of cupcake?</p>
-                    <input id="registerQuestion" required type="text" placeholder="Type of cupcake">
-                </div>
-                <input id="registerSubmit" type="submit" value="SIGN UP">
+
+                <input id="registerSubmit" type="submit" value="Register">
             </form>
 
             <div id="ifNewDiv">
@@ -40,12 +44,12 @@
         </div>
         
         <div id="loginContainer">
-             <h2 class="basicHeader">WELCOME BACK</h2>
-             <h3 class="subHeading">Please sign in to continue</h3>
+             <h2 class="basicHeader">Welcome Back.</h2>
+             <h3 class="subHeading">Log in to create memories</h3>
             <form id="loginForm">
                 <input id="loginEmail" required type="email" placeholder="Email">
                 <input id="loginPassword" required type="password" placeholder="Password">
-                <input id="loginSubmit" type="submit" value="SIGN IN">
+                <input id="loginSubmit" type="submit" value="Log in">
             </form>
 
             <div id="ifNewDiv">

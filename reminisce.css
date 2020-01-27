@@ -1,0 +1,439 @@
+.highlight {
+    background: #3b3b3a;
+    color: #fff;
+}
+
+#headings {
+    margin-top: 150px;
+}
+
+.mainHeading {
+    display: block;
+    float: left;
+    padding-left: 54px;
+    font-size: 40px;
+    color: var(--header-color);
+}
+
+#addJar {
+    font-size: 48px;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-top: 22px;
+}
+
+#addJar:hover {
+    color:grey;
+    cursor: pointer;
+}
+
+.jarList {
+    width: 90%;
+    display: table;
+    list-style: none;
+    text-align: center;
+}
+
+
+.jarItem {
+/*
+    display: table-cell;
+    float: left;
+    width: 20%;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid green;
+*/
+    
+    margin: 0 auto;
+    width: 20%;
+    float: left;
+    padding-top: 50px;
+}
+
+.jarImg {
+    width: 120px;
+    margin: 0 auto;
+}
+
+.jarImg:hover {
+    background: red;
+    cursor: pointer;
+}
+
+.jarTitle {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    word-break: break-all;
+    padding-bottom: 5px;
+}
+
+/*The modal background*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/*Modal content*/
+.modal-content {
+    position: relative;
+    background-color: #f9fafc;
+    margin: auto;
+    margin-top: 100px;
+    padding: 0;
+    border: 1px solid #888;
+    width: 60%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+#close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #333;
+  margin-right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close-btn:hover,
+#close-btn:focus {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: var(--header-color);
+}
+
+#modal-body {
+    width: 100%;
+    display: table;
+    height: 300px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: var(--subheading-color);
+  color: #FFF;
+  height: 80px;
+}
+
+.footer-btn {
+    color: #FFF;
+    background: none;
+    border-style: solid;
+    border-color: var(--header-color);
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    width: 100px;
+    height: 60%;
+    font-size: 16px;
+}
+
+#footer-back-btn {
+    float: left;
+    margin-top: 18px;
+    color: lightgray;
+    outline: none;
+    border-radius: 0px;
+    border: none;
+    font-size: 13px;
+}
+
+#footer-next-btn {
+    float: right;
+    background: #FFF;
+    margin-top: 17px;
+    color: #333;
+}
+
+#footer-back-btn, #footer-next-btn:hover {
+    cursor: pointer;
+}
+
+#footer-back-btn:hover {
+    border-bottom: 1px solid #FFF;
+}
+
+#footer-next-btn:hover {
+    background: lightgray;
+}
+
+
+.inline-container {
+    display: table;
+}
+
+.jarInput {
+    width: 55%;
+    margin:auto;
+    margin-left: 48px;
+    padding: 5px;
+    font-size: 22px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    float: left;
+}
+
+.modal-img {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 100px; 
+    margin-right: 10%;;
+}
+
+.modalCreate {
+    position: relative;
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+    display: table-cell;
+    border-right: 1px solid #333;
+}
+
+.modalJoin {
+    position: relative;
+    width: 50%;
+    height: 350px;
+    text-align: center;
+    overflow: hidden;
+    display: table-cell;
+}
+
+.choiceHeader {
+    text-align: center;
+    color: var(--header-color);
+}
+
+.subChoiceHeader {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--subheading-color)
+}
+
+.img {
+    width: 100px;
+}
+
+.choiceButton {
+    width: 50%;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+    padding: 10px;
+    margin-left: 25%;
+    margin-bottom: 10px;
+    color: white;
+    background: var(--header-color);
+    outline: none;
+    border: none;
+}
+
+.choiceButton:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+.fullHeader {
+    text-align: center;
+    color: var(--header-color);
+}
+
+.subDescription {
+    width: 70%;
+    color: var(--subheading-color);
+    text-align: center;
+    margin: auto;
+    margin-top: -10px;
+}
+
+.smallHeader {
+    color: var(--subheading-color);
+    font-weight: 800;
+    font-size: 14px;
+    padding-left: 48px;
+    margin-top: 80px;
+}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 724px) {
+  .jarItem {
+    width: 50%;
+  }
+    
+    .modal-content{
+        width: 90%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.simpleHeading {
+    padding-left: 20px;
+    font-size: 20px;
+    margin-bottom: -10px;
+    color: #e0dfdc;
+}
+
+/*Entire container holding 2 divs*/
+.groupContainer {
+    width: 35%;
+    position: fixed;
+    height: 100%;
+    margin-top: 70px;
+    min-width: 450px;
+    word-break: break-word;
+}
+
+/*Div holding list of groups*/
+.groupDiv {
+    width: 35%;
+    position: block;
+    height: 100%;
+    float: left;
+    word-break: break-word;
+    background: var(--slide-color);
+}
+
+.groupHeading {
+    color: #FFF;
+    font-size: 26px;
+    padding-left: 20px;
+}
+
+.groupChosen {
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+
+#groupList {
+    list-style: none;
+    margin-left: -40px;
+    padding: none;
+}
+
+.groupItem {
+    color: var(--hover-color);
+    padding: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+    border: none;
+}
+
+.groupItem:hover {
+    background: var(--header-color);
+    cursor: pointer;
+}
+/*Div holding all info about clicked group
+i.e. Memory jars, members*/
+.groupInfoDiv {
+    width: 64%;
+    position: block;
+    height: 100%;
+    float: left;
+    word-break: break-word;
+    background: #3b3b3a;
+}
+
+/*Heading for selected group*/
+#selectedGroupHeading {
+    
+}
+
+.list {
+    list-style: none;
+    margin-left: -20px;
+}
+
+#memoryJars {
+}
+
+#membersList {
+}
+
+.listItem {
+    padding: 10px;
+    padding-left: 0px;
+    color: #FFF;
+}
+
+.listItem:hover {
+    background: #fff;
+    cursor: pointer; 
+}
+
+
+
+
+

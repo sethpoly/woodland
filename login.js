@@ -54,7 +54,7 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
     console.log(user + " successfully registered");
     
     // Navigate to main html page
-    window.location.href = 'index.html'; 
+    window.location.href = 'home.html'; 
         
     }).catch(function(error) {
         console.log(error.message);
@@ -78,7 +78,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     console.log('Sign in successful'); 
         
     // Navigate to main html page
-    window.location.href = 'index.html'; 
+    window.location.href = 'home.html'; 
         
 }).catch(function(error) {
         console.log(error.message);

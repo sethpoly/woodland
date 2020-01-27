@@ -1,12 +1,32 @@
+:root {
+    --hover-color: lightgray;
+    --header-color: #e37c06;
+    --slide-color: #1f1f1f;
+    --subheading-color: #4a4a49;
+    --weirdwhite: #f9fafc;
+    --listcolor: #d6d5d3;
+    --linkcolor: #068ae3;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--weirdwhite);
+}
 .container {
     width: 100%;
     margin: auto;
+}
+
+.keyword {
+    color: var(--header-color);
 }
 
 .basicHeader {
     text-align: center;
     font-size: 34px;
     width: 100%;
+    color: var(--header-color);
 }
 
 .loginPhoto {
@@ -18,6 +38,7 @@
     text-align: center;
     font-weight: 100;
     margin-top: -25px;
+    color: var(--subheading-color);
 }
 
 .closeButton {
@@ -29,17 +50,39 @@
     margin-right: 12px;
 }
 
+.infoHeader {
+    color: white;
+    font-size: 58px;
+    width: 80%;
+    padding-left: 54px;
+    padding-top: 200px;
+}
+
+.catchPhraseList {
+    list-style: none;
+    display: block;
+    padding-left: 54px;
+    margin-top: -20px;
+}
+
+.catchPhrase {
+    color: var(--listcolor);
+    padding-top: 15px;
+    font-size: 28px;
+    
+}
+
 #infoDiv {
     width: 40%;
     height: 100vh;
-    background-color: goldenrod;
+    background-color: #333;
     float: left;
 }
 
 #loginDiv {
     width: 60%;
     height: 100vh;
-    background-color: blue;
+    background-color: var(--weirdwhite);
     float: left;
 }
 
@@ -49,16 +92,16 @@
     margin: auto;
     margin-top:100px;
     padding: 15px;
-    background-color: white;
+    background-color: none;
     display: none;
 }
 
-#registerEmail, #registerPassword, #registerUsername, #registerQuestion, #loginEmail, #loginPassword {
+#registerEmail, #registerPassword, #registerUsername, #loginEmail, #loginPassword, .inputField {
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom:  1px solid gray;
-    background-color: white;
+    background: none;
     padding: 5px;
     outline: none;
     width: 70%;
@@ -84,49 +127,33 @@
     margin-bottom: 40px;
 }
 
-.questionContainer {
-    border: 1px solid red;
-    border-radius: 5px;
-    padding: 10px;
-    margin: auto;
-    margin-top: 60px;
-    width: 70%;
-}
-
-#registerQuestion {
+.inputField {
     display: block;
-    font-size: 20px;
-    padding: 2px;
     margin: auto;
-    margin-bottom: 5px;
-}
-
-#secretQuestion {
-    margin: auto;
-    margin-bottom: 15px;
-    word-wrap: break-word;
-    text-align: left;
-    font-size: 24px;
+    margin-bottom: 40px;
 }
 
 #registerSubmit, #loginSubmit {
     margin: auto;
-    width: 50%;
+    width: 70%;
     margin-top: 40px;
     margin-bottom: 30px;
-    padding: 10px;
+    padding: 15px;
     display: block;
     border-radius: 10px;
     border-style: none;
     cursor: pointer;
-    background-color: lightgray;
+    background: #333;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 
 #loginHrefBtn {
     border: none;
     margin: auto;
     display: block;
-    color: cornflowerblue;
+    color: var(--linkcolor);
     background-color: transparent;
     font-size: 16px;
     cursor: pointer;
@@ -136,16 +163,16 @@
     width: 90%;
     height: auto;
     margin: auto;
-    margin-top:100px;
+    margin-top:200px;
     padding: 15px;
-    background-color: white;
+    background-color: none;
 }
 
 #registerHrefBtn {
     border: none;
     margin: auto;
     display: block;
-    color: cornflowerblue;
+    color: #068ae3;
     background-color: transparent;
     font-size: 16px;
     cursor: pointer;
@@ -159,6 +186,10 @@
     #loginDiv {
         width: 100%;
         margin-top: 50px;
+    }
+    
+    #registerSubmit, #loginSubmit {
+        width: 75%;
     }
 
     #registerContainer, #loginContainer {

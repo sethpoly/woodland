@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Woodland</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/home.css">
+     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+  </head>  
+  
+  <header>
+      
+  </header>
+    
+<body>
+   <ul class="navBar">
+        <a href="home.html"><h2 class="navHeading">Woodland</h2></a>
+
+        <li class="navItem"><input id="navLogin" onclick="loginPage()" type="button" value="Log in"></li>   
+        <li class="navItem"><a href="reminisce.html">Reminisce</a></li> 
+        <li class="navItem"><a href="#Create">Create</a></li> 
+
+        <span id="slideMenuBtn" onclick="openNav()">&#9776;</span>
+   </ul> 
+    
+    <div id="categoryContainer">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <ul class="sideList">
+            <li class="sideItem"><a href="#Create">Create</a></li>
+            <li class="sideItem"><a href="#Create">Reminisce</a></li>
+            <li class="sideItem"><a href="home.html">About</a></li>
+            <li class="sideItem"><a href="#Create">Login</a></li>
+        </ul>
+    </div>
+    
+    <div class="descriptionDiv">
+      <div class="headingsDiv">
+        <h1 class="heading">Neque porro quisquam est qui dolorem</h1>
+        <h2 class="subHeading">Neque porro quisquam est qui dolorem quisquam est qui dolorem</h2>
+       </div>
+            
+    </div>
+    
+       <ul class="iconsList">
+        <li class="iconBox"><div class="iconContent"><img class="icon" src="sample_icon.png"><h2 class="iconHeading">CREATE</h2><h3 class="iconSubheading">Neque porro quisquam est qui dolorem</h3></div></li>
+        <li class="iconBox"><div class="iconContent"><img class="icon" src="sample_icon.png"><h2 class="iconHeading">REMINISCE</h2><h3 class="iconSubheading">Neque porro quisquam est qui dolorem</h3></div></li>
+        <li class="iconBox"><div class="iconContent"><img class="icon" src="sample_icon.png"><h2 class="iconHeading">CONNECT</h2><h3 class="iconSubheading">Neque porro quisquam est qui dolorem</h3></div></li>
+       </ul>     
+    
+
+    
+    
+    
+    
+    
+    
+    
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyD4mJJ9TTwf16tfK-P39KpZ8s4n9562tfQ",
+    authDomain: "woodland-6f794.firebaseapp.com",
+    databaseURL: "https://woodland-6f794.firebaseio.com",
+    projectId: "woodland-6f794",
+    storageBucket: "woodland-6f794.appspot.com",
+    messagingSenderId: "168489669833",
+    appId: "1:168489669833:web:f62b5d68cc34c4db636918",
+    measurementId: "G-18LS5MW0S2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="home.js"></script>
+</html>

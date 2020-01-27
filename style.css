@@ -425,7 +425,6 @@ hr {
     margin-top: 5px;
     margin-bottom: 20px;
     color: white;
-    border-bottom: solid red;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

@@ -1,0 +1,244 @@
+:root {
+    --hover-color: lightgray;
+    --header-color: #e35f06;
+    --slide-color: #1f1f1f;
+    --subheading-color: #4a4a49;
+}
+
+html {
+    background: #f9fafc; 
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+/*
+    background: linear-gradient(to bottom,#c4a8ed, white);
+    background-repeat: no-repeat;
+*/
+
+}
+
+.navHeading {
+    color: #edfcfc;
+    font-size: 32px;
+    float: left;
+    display: block;
+    margin-top: 20px;
+    margin-left: 54px;
+}
+
+.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+}
+
+.navItem {
+    float: right;
+}
+
+.navItem a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 12px;
+    margin-left: 24px;
+    font-size: 16px;
+}
+
+.navItem a:hover {
+    color: var(--hover-color);
+}
+
+#navLogin {
+    font-size: 16px;
+    margin-right: 54px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 12px;
+    margin-left: 24px;
+    border: none;
+    background: none;
+    outline: none;
+}
+#navLogin:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+}
+
+#slideMenuBtn {
+    display: none;
+    float: right;
+    margin-right: 32px;
+    margin-top: -4px;
+    color: white;
+    padding: 5px;
+    font-size:48px;
+    cursor: pointer;
+}
+
+#slideMenuBtn:hover {
+    color: var(--hover-color);
+}
+
+#categoryContainer {
+
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 200 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: var(--slide-color); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#categoryContainer .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 64px;
+  margin-left: 50px;
+  color: #818181;
+  text-decoration: none;
+}
+
+.sideList {
+    list-style: none;
+    margin:auto;
+    margin-top: 70px;
+    
+}
+
+.sideItem {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 32px;
+    text-align: right;
+}
+
+.sideItem a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.sideItem a:hover {
+    color: var(--hover-color);
+}
+
+/*The description headings*/
+.descriptionDiv {
+   margin-top: 220px;
+   display: block;
+}
+
+.headingsDiv {
+    margin-left: 54px;
+    width:40%;
+    float: left;
+}
+
+.heading {
+  font-size: 40px;    
+  margin-bottom: 10px;
+  color: var(--header-color);
+}
+
+.subHeading {
+  font-size: 22px;
+   margin-bottom: 100px;
+  color: var(--subheading-color);
+}
+
+.iconsList {
+    clear: left;
+    list-style-type: none;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.iconBox {
+    display: inline-block;
+    width: 27%;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.iconContent {
+    text-align: center;
+}
+
+.icon {
+    width: 45%;
+    min-width: 100px;
+}
+
+.iconHeading {
+    color: #000;
+}
+
+.iconSubheading {
+    color: var(--subheading-color);
+    margin-top: -10px;
+}
+
+
+
+/*MOBILE*/
+@media only screen and (max-width: 658px) {
+    /*Shrink tab header*/
+    .navHeading {
+        font-size: 24px;
+        margin-top: 22px;
+    }
+    /*Remove nav items to replace with slideout menu*/
+    .navItem {
+        display: none;
+    }
+    /*Show slideOutMenuBtn*/
+    #slideMenuBtn {
+        display: block;
+    }
+    /*Make home heading/subheading larger*/
+    .headingsDiv {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+    .heading {
+        font-size: 32px;
+    }
+    /*Stack and chang width% of icons*/
+    .iconBox {
+        display: block;
+        width: 90%;
+        margin-top: 70px;
+    }
+
+
+}
+
+/*Back to desktop*/
+@media only screen and (min-width: 609px) {
+    /*Delete slideout menu*/
+    #categoryContainer {
+        display: none;
+    }
+}

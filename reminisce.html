@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reminisce</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/reminisce.css">
+    <link rel="stylesheet" href="/home.css">
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    </head>
+    
+    <header>
+    </header>
+    
+    <body>
+       <ul class="navBar">
+        <a href="home.html"><h2 class="navHeading">[Memories]</h2></a>
+
+        <li class="navItem"><input id="navLogin" onclick="loginPage()" type="button" value="Log in"></li>   
+        <li class="navItem"><a href="#Reminisce">Memory Jars</a></li> 
+        <li class="navItem"><a href="#Create">Home</a></li> 
+
+        <span id="slideMenuBtn" onclick="openNav()">&#9776;</span>
+   </ul> 
+    
+    <div id="categoryContainer">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <ul class="sideList">
+            <li class="sideItem"><a href="#Create">Create</a></li>
+            <li class="sideItem"><a href="#Create">Reminisce</a></li>
+            <li class="sideItem"><a href="home.html">About</a></li>
+            <li class="sideItem"><a href="#Create">Login</a></li>
+        </ul>
+    </div>
+    
+    <div id="headings">
+        <h1 class="mainHeading">Memory Jars</h1>
+        <span id="addJar" onclick="addJar()">+</span>
+    </div>   
+        
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div  id="modal-content" class="modal-content">
+    
+      
+      
+<!--
+      <div class="modal-header">
+      <span id="close-btn">&times;</span>
+      <h2>Create a Memory Jar</h2>
+    </div>
+-->
+    <div id="modal-body">
+        
+        
+<!--        First modal-->
+        <div class="modalCreate">
+        <h3 class="choiceHeader">Create</h3>
+        <p class="subChoiceHeader">Create a new jar and start filling it with memories.</p>
+        <img  class="img" src="jar.png">
+        <input id="create-jar-btn" class="choiceButton" type="button" value="Create a jar" onclick="createJarModal()">
+        </div>
+        <div class="modalJoin">
+        <h3 class="choiceHeader">Join</h3>
+        <p class="subChoiceHeader">Enter a jar invite and start adding memories to a friend's jar.</p>
+        <img  class="img" src="jar.png">
+       <input id="join-jar-btn" class="choiceButton" type="button" value="Join a jar">
+        </div>
+       
+<!--        Create modal -->
+<!--
+        <span id="close-btn">&times;</span>
+        <h2 class="fullHeader">Create a jar</h2>
+        <p class="subDescription">Name your jar, share your jar with friends, and start adding memories together!</p>
+        <h4 class="smallHeader">JAR NAME</h4>
+        <input class="jarInput" id="jarTitleInput"type="text" placeholder="Enter a jar name">
+        <img class="modal-img" src="jar.png">
+    </div>
+    <div class='modal-footer'>
+        <input class="footer-btn" id="footer-back-btn" type="button" value="BACK">
+        <input class="footer-btn" id="footer-next-btn" type="button" value="Create">
+    </div>
+-->
+  </div>
+
+</div>
+    
+        </div>
+        
+        
+
+        
+        <ul class="jarList">
+        <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3><img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>
+        <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>
+        <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>
+        <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>
+          
+        <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>
+        <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>
+        <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>    
+        </ul>
+        
+        
+        
+    
+    
+<!--
+    <div class="groupContainer">
+        <div class="groupDiv">
+            <h2 class="groupHeading">Groups</h2>
+                <ul id="groupList">
+                    <li class="groupItem"  value="222">groupname</li>
+                    <li class="groupItem"  value="">groupname2</li>
+                    <li class="groupItem" value="">groupname3</li>
+                </ul>
+            
+                
+        </div>
+        <div class="groupInfoDiv">
+            <h2 class="groupHeading groupChosen" id="selectedGroupHeading">groupHeading</h2>
+            
+            <h3 class="simpleHeading">Memory Jars</h3>
+            <ul id="memoryJars" class="list">
+                <li class="listItem" value="">Memoryjar1</li>
+                <li class="listItem" value="">Memoryjar2</li>
+                <li class="listItem" value="">Memoryjar3</li>
+            </ul>
+            
+            <h3 class="simpleHeading">Members</h3>
+            <ul id="membersList" class="list">
+                <li class="listItem" value="">Daniel Toledo</li>
+                <li class="listItem" value="">Sam Hegedus</li>
+                <li class="listItem" value="">Seth Polyniak</li>
+            </ul>
+        </div>
+    </div>  
+        
+-->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>   
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD4mJJ9TTwf16tfK-P39KpZ8s4n9562tfQ",
+    authDomain: "woodland-6f794.firebaseapp.com",
+    databaseURL: "https://woodland-6f794.firebaseio.com",
+    projectId: "woodland-6f794",
+    storageBucket: "woodland-6f794.appspot.com",
+    messagingSenderId: "168489669833",
+    appId: "1:168489669833:web:f62b5d68cc34c4db636918",
+    measurementId: "G-18LS5MW0S2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="reminisce.js"></script>
+<script src="home.js"></script>
+</html>
