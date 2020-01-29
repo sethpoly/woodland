@@ -35,6 +35,33 @@
     text-align: center;
 }
 
+.jar-container {
+    width: 120px;
+    height: 17-px;
+    text-align: center;
+    position: relative;
+}
+
+.test-img {
+    width: 100%;
+    height: 100%;
+
+filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%) contrast(94%);
+
+
+
+/*    filter: invert(66%) sepia(38%) saturate(7254%) hue-rotate(84deg) brightness(120%) contrast(121%);*/
+}
+.test-header {
+    font-size: 16px;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    word-wrap: break-word;
+    padding: 1px;
+    color: #902c50;
+    font-family:'Merienda', cursive;
+}
 
 .jarItem {
 /*
@@ -45,11 +72,13 @@
     padding: 30px;
     border: 1px solid green;
 */
+
     
     margin: 0 auto;
     width: 20%;
     float: left;
     padding-top: 50px;
+    
 }
 
 .jarImg {
