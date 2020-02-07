@@ -1,6 +1,6 @@
 :root {
     --hover-color: lightgray;
-    --header-color: #e37c06;
+    --header-color: #169cc0;
     --slide-color: #1f1f1f;
     --subheading-color: #4a4a49;
     --weirdwhite: #f9fafc;
@@ -10,7 +10,7 @@
 
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     background: var(--weirdwhite);
 }
 .container {
@@ -20,13 +20,18 @@ body {
 
 .keyword {
     color: var(--header-color);
+    font-family: 'Oleo Script', 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    font-size: 64px;
 }
 
 .basicHeader {
     text-align: center;
-    font-size: 34px;
+    font-size: 38px;
     width: 100%;
     color: var(--header-color);
+    font-family: 'Oleo Script', 'Open Sans', sans-serif;
+    letter-spacing: 2px;
 }
 
 .loginPhoto {
@@ -96,7 +101,7 @@ body {
     display: none;
 }
 
-#registerEmail, #registerPassword, #registerUsername, #loginEmail, #loginPassword, .inputField {
+#registerEmail, #registerPassword, #registerUsername, #registerFirstname, #registerLastname, #loginEmail, #loginPassword, .inputField {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -178,12 +183,13 @@ body {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 790px) {
     #infoDiv {
         display: none;
     }
 
     #loginDiv {
+        
         width: 100%;
         margin-top: 50px;
     }
@@ -196,7 +202,7 @@ body {
         margin-top: 5px;
     }
     
-    #registerEmail, #registerUsername, #registerPassword, #registerQuestion, #loginEmail, #loginPassword {
+    #registerEmail, #registerUsername, #registerPassword, #registerUsername, #registerFirstname, #registerLastname, #registerQuestion, #loginEmail, #loginPassword {
         font-size: 16px;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -214,7 +220,7 @@ body {
     }
 
     .basicHeader {
-        font-size: 24px;
+        font-size: 32px;
     }
     
     .subHeading {

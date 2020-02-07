@@ -1,3 +1,8 @@
+:root {
+   --my-blue: #96dff3;
+   --blue-hover: #1389a9;
+}
+
 .highlight {
     background: #3b3b3a;
     color: #fff;
@@ -12,8 +17,144 @@
     float: left;
     padding-left: 54px;
     font-size: 40px;
-    color: var(--header-color);
+/*    color: var(--header-color);*/
+    color: #333;
 }
+
+
+
+
+
+/*TESTING NEW JAR CONTAINER (VECTR)*/
+#jarContainer {
+  height: 100%; /* 100% Full-height */
+  width: 300px; /* 200 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 0; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #333; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.container-header {
+    padding-left: 20px;
+    padding-top: 60px;
+    
+    font-size: 48px;
+    color: var(--my-blue);
+    font-family: 'Oleo Script';
+    letter-spacing: 1px;
+}
+
+.sub-icon{
+    padding-left: 18px;
+    margin-top: -30px;
+    
+    font-size: 26px;
+    color: #FFF;
+    font-family: 'Oleo Script';
+}
+
+.sub-icon:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.jar-title-list {
+    margin-top: -10px;
+    list-style: none;
+}
+
+.jar-title-item {
+    padding: 10px;
+    margin-left: -30px;
+    font-size: 22px;
+    
+    color: lightgray;
+    font-family: 'Open Sans';
+}
+
+.jar-title-item a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #e8ecf4;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+}
+
+.jar-title-item:hover {
+    background: #000;
+    cursor: pointer;
+}
+
+.pending-header {
+    padding-left: 18px;
+    margin-top: 30px;
+    
+    font-size: 26px;
+    color: var(--my-blue);
+    font-family: 'Oleo Script';
+}
+
+#pending-invite-list {
+    margin-top: -30px;
+    list-style: none;
+}
+
+.pending-jar-item {
+    position: relative;
+    padding: 10px;
+    margin-left: -30px;
+    font-size: 22px;
+    
+    color: lightgray;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.pending-jar-item:hover {
+/*    background: #000;*/
+}
+
+.btn-checkmark {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: auto;
+    margin-top: 5px;
+    margin-right: 65px;
+    
+    font-size: 22px;
+}
+
+.btn-xmark {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: auto;
+    margin-right: 20px;
+    
+    font-size: 30px;
+}
+
+
+.btn-checkmark:hover, .btn-xmark:hover {
+    color: #000;
+    cursor: pointer;
+}
+/*END TESTING NEW JAR CONTAINER (VECTR)*/
+
+
+
+
 
 #addJar {
     font-size: 48px;
@@ -29,17 +170,19 @@
 }
 
 .jarList {
-    width: 90%;
+    width: 100%;
     display: table;
     list-style: none;
     text-align: center;
+    margin: 0
 }
 
 .jar-container {
-    width: 120px;
-    height: 17-px;
+    width: 170px;
+    height: 230px;
     text-align: center;
     position: relative;
+    margin: auto;
 }
 
 .test-img {
@@ -73,11 +216,10 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
     border: 1px solid green;
 */
 
-    
-    margin: 0 auto;
     width: 20%;
     float: left;
     padding-top: 50px;
+    text-align: center;
     
 }
 
@@ -128,7 +270,7 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
 }
 
 /* Add Animation */
@@ -169,11 +311,13 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
     width: 100%;
     display: table;
     height: 300px;
+    font-family: 'Open Sans', sans-serif; 
+
 }
 
 .modal-footer {
   padding: 2px 16px;
-  background-color: var(--subheading-color);
+  background-color: #e8ecf4;
   color: #FFF;
   height: 80px;
 }
@@ -183,7 +327,7 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
     background: none;
     border-style: solid;
     border-color: var(--header-color);
-    border-radius: 3px;
+    border-radius: 35px;
     border: none;
     padding: 5px;
     width: 100px;
@@ -194,7 +338,7 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
 #footer-back-btn {
     float: left;
     margin-top: 18px;
-    color: lightgray;
+    color: #A3B3D3;
     outline: none;
     border-radius: 0px;
     border: none;
@@ -203,9 +347,16 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
 
 #footer-next-btn {
     float: right;
-    background: #FFF;
+    background: var(--header-color);
     margin-top: 17px;
-    color: #333;
+    color: #FFF;
+}
+
+#footer-done-btn {
+    float: right;
+    background: var(--header-color);
+    margin-top: 17px;
+    color: #FFF;
 }
 
 #footer-back-btn, #footer-next-btn:hover {
@@ -213,11 +364,12 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
 }
 
 #footer-back-btn:hover {
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid #A3B3D3;
 }
 
-#footer-next-btn:hover {
-    background: lightgray;
+#footer-next-btn, #footer-done-btn:hover {
+    background: var(--blue-hover);
+    cursor: pointer;
 }
 
 
@@ -273,6 +425,11 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
 .choiceHeader {
     text-align: center;
     color: var(--header-color);
+    font-family: 'Oleo Script','Open Sans', sans-serif; 
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin-bottom: 5px;
+
 }
 
 .subChoiceHeader {
@@ -300,16 +457,19 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
     background: var(--header-color);
     outline: none;
     border: none;
+    border-radius: 15px;
 }
 
 .choiceButton:hover {
     cursor: pointer;
-    background-color: grey;
+    background-color: var(--blue-hover);
 }
 
 .fullHeader {
     text-align: center;
     color: var(--header-color);
+    font-family: 'Oleo Script','Open Sans', sans-serif; 
+    letter-spacing: 1px;
 }
 
 .subDescription {
@@ -317,7 +477,7 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
     color: var(--subheading-color);
     text-align: center;
     margin: auto;
-    margin-top: -10px;
+    margin-top: -20px;
 }
 
 .smallHeader {
@@ -327,6 +487,122 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
     padding-left: 48px;
     margin-top: 80px;
 }
+
+/*For invite friends modal*/
+#input-search-friends {
+    outline: none;
+    border: 1px solid var(--blue-hover);
+    border-radius: 5px;
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 22px;
+}
+
+#search-results-people {
+    
+}
+
+.search-results {
+    width: 50%;
+    position: relative;
+    margin: auto;
+    margin-top: 15px;
+    
+    list-style: none;
+}
+
+.list-item-person {
+    padding: 8px;
+    padding-left: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    
+    color: var(--subheading-color);
+}
+
+.list-item-person:hover {
+    background: #e8ecf4;
+}
+
+.btn-invite {
+    position: absolute;
+    margin-top: -4px;
+    right: 3px;
+    
+    
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid var(--header-color);
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--header-color);
+    background: #FFF;
+}
+
+.btn-invite:hover {
+    cursor: pointer;
+    background: var(--header-color);
+    color: #FFF;
+}
+
+.hr-invite-modal {
+    width: 70%;
+}
+
+.caps-subheading {
+    width: 350px;
+    margin: auto;
+    
+    color: var(--subheading-color);
+    font-weight: 800;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.div-invite-code {
+    display: block;
+    position: relative;
+    width: 300px;;
+    margin: auto;
+}
+
+#text-jar-id {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    
+    padding: 5px;
+    outline: none;
+    border: 1px solid var(--hover-color);
+    border-radius: 5px;
+    background-color: #e8ecf4;
+    font-size: 22px;
+}
+
+
+.btn-copy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4.4em;
+    margin-top: 14px;
+    border: 1px solid var(--header-color);
+    border-radius: 5px;
+    padding: 4px;
+    
+    font-family: 'Open Sans', sans-serif;
+    background: var(--header-color);
+    color: #FFF;
+    font-size: 15px;
+}
+
+.btn-copy:hover {
+    cursor: pointer;
+    background: var(--blue-hover);
+}
+
 
 /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 724px) {
@@ -338,107 +614,33 @@ filter: invert(23%) sepia(56%) saturate(1348%) hue-rotate(299deg) brightness(92%
         width: 90%;
     }
     
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.simpleHeading {
-    padding-left: 20px;
-    font-size: 20px;
-    margin-bottom: -10px;
-    color: #e0dfdc;
-}
-
-/*Entire container holding 2 divs*/
-.groupContainer {
-    width: 35%;
-    position: fixed;
-    height: 100%;
-    margin-top: 70px;
-    min-width: 450px;
-    word-break: break-word;
-}
-
-/*Div holding list of groups*/
-.groupDiv {
-    width: 35%;
-    position: block;
-    height: 100%;
-    float: left;
-    word-break: break-word;
-    background: var(--slide-color);
-}
-
-.groupHeading {
-    color: #FFF;
-    font-size: 26px;
-    padding-left: 20px;
-}
-
-.groupChosen {
-    border-bottom: 1px solid grey;
-    padding-bottom: 10px;
-}
-
-#groupList {
-    list-style: none;
-    margin-left: -40px;
-    padding: none;
-}
-
-.groupItem {
-    color: var(--hover-color);
-    padding: 20px;
-    padding-left: 20px;
-    font-size: 18px;
-    border: none;
-}
-
-.groupItem:hover {
-    background: var(--header-color);
-    cursor: pointer;
-}
-/*Div holding all info about clicked group
-i.e. Memory jars, members*/
-.groupInfoDiv {
-    width: 64%;
-    position: block;
-    height: 100%;
-    float: left;
-    word-break: break-word;
-    background: #3b3b3a;
-}
-
-/*Heading for selected group*/
-#selectedGroupHeading {
+    .choiceButton {
+        width: 70%;
+        left: -27px;
+    }
+    
+    .search-results {
+        width: 80%;
+    }
+    .btn-invite {
+        right: 30px;
+    }
+    
+    .caps-subheading {
+        width: 90%;
+    }
+    .div-invite-code {
+        width: 90%;
+    }
     
 }
+
+
+
+
+
+
+
 
 .list {
     list-style: none;

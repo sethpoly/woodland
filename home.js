@@ -8,6 +8,11 @@ function closeNav() {
   document.getElementById("categoryContainer").style.width = "0";
 } 
 
+// Close the about page
+function closeAbout() {
+    window.location.href = 'reminisce.html';
+}
+
 // GO TO LOGIN PAGE
 function loginPage() {
     window.location.href = 'login.html';

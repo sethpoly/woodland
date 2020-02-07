@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/reminisce.css">
     <link rel="stylesheet" href="/home.css">
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Oleo+Script|Open+Sans&display=swap" rel="stylesheet">
+
     </head>
     
     <header>
@@ -36,15 +37,14 @@
         </ul>
     </div>
     
+<!--
     <div id="headings">
         <h1 class="mainHeading">Memory Jars</h1>
         <span id="addJar" onclick="addJar()">+</span>
     </div>   
+-->
         
-        <!-- The Modal -->
 <div id="myModal" class="modal">
-
-  <!-- Modal content -->
   <div  id="modal-content" class="modal-content">
     
       
@@ -56,9 +56,8 @@
     </div>
 -->
     <div id="modal-body">
-        
-        
 <!--        First modal-->
+<!--
         <div class="modalCreate">
         <h3 class="choiceHeader">Create</h3>
         <p class="subChoiceHeader">Create a new jar and start filling it with memories.</p>
@@ -71,6 +70,7 @@
         <img  class="img" src="jar.png">
        <input id="join-jar-btn" class="choiceButton" type="button" value="Join a jar">
         </div>
+-->
        
 <!--        Create modal -->
 <!--
@@ -86,23 +86,87 @@
         <input class="footer-btn" id="footer-next-btn" type="button" value="Create">
     </div>
 -->
-  </div>
-
-</div>
-    
+        
+<!--        Invite people modal-->
+        <span id="close-btn">&times;</span>
+        <h2 class="fullHeader">Invite people</h2>
+        <p class="subDescription">Share your jar with friends and start filling it with memories!</p>
+        <input id="input-search-friends"type="text" placeholder="Search for anyone">
+        <ul id="search-results-people" class="search-results">
+            <li class="list-item-person">Daniel Toledo<input class="btn-invite" type="button" value="INVITE"></li>
+           <li class="list-item-person">Sam Hegedus<input class="btn-invite" type="button" value="INVITE"></li>
+        </ul>
+        <hr class="hr-invite-modal">
+        
+        <h4 class="caps-subheading">OR, SEND THE  <em>UNIQUE JAR ID</em>  TO A FRIEND</h4>
+        <div class="div-invite-code">
+            <input type="button" class="btn-copy" onclick="copy()" value="Copy">
+            <input type="text" id="text-jar-id" value="27HDHADH2333862" readonly>
         </div>
+      </div>
+
+    </div>
+</div>
+        
+    <div id="jarContainer">
+        <h2 class="container-header">My jars</h2>
+        <h3 class="sub-icon" onclick="addJar()">+ Add new</h3>
+        
+        <ul class="jar-title-list" id="user-jar-list">
+            <li class="jar-title-item"><a href="#">The Woods</a></li>
+            <li class="jar-title-item"><a href="#">Tidioute</a></li>
+            <li class="jar-title-item"><a href="#">Virginia Beach</a></li>
+            <li class="jar-title-item"><a href="#">My Childhood</a></li>
+        </ul>
+        
+        <h3 class="pending-header">Pending Invites</h3>
+        <ul id="pending-invite-list">
+            <li class="pending-jar-item">In the Back 
+          <h4 class="btn-checkmark">&#10003;</h4>
+            <h4 class="btn-xmark">&#215;</h4>
+            </li>
+        </ul>
+        
+    </div>  
+        
+        
         
         
 
+<!--
         
         <ul class="jarList">
         <li class="jarItem"> 
-<!--            <h3 class="jarTitle">Sample Header fdd</h3><img class="jarImg" src="jar.png" alt="Picture of a jar"> -->
             <div class="jar-container">
             <img  class="test-img" src="jar-blue.png">
             <h3 class="test-header">IN THE WOODS</h3>
             </div>
-            </li>
+        </li>
+        <li class="jarItem"> 
+            <div class="jar-container">
+            <img  class="test-img" src="jar-blue.png">
+            <h3 class="test-header">IN THE WOODS</h3>
+            </div>
+        </li>
+         <li class="jarItem"> 
+            <div class="jar-container">
+            <img  class="test-img" src="jar-blue.png">
+            <h3 class="test-header">IN THE WOODS</h3>
+            </div>
+        </li>
+        <li class="jarItem"> 
+            <div class="jar-container">
+            <img  class="test-img" src="jar-blue.png">
+            <h3 class="test-header">IN THE WOODS</h3>
+            </div>
+        </li>
+        <li class="jarItem"> 
+            <div class="jar-container">
+            <img  class="test-img" src="jar-blue.png">
+            <h3 class="test-header">IN THE WOODS</h3>
+            </div>
+        </li>
+
         <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>
         <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>
         <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>
@@ -111,58 +175,12 @@
         <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>
         <li class="jarItem"> <h3 class="jarTitle">Sample Header fdd</h3> <img class="jarImg" src="jar.png" alt="Picture of a jar"> </li>    
         </ul>
-        
-        
-        
-    
-    
-<!--
-    <div class="groupContainer">
-        <div class="groupDiv">
-            <h2 class="groupHeading">Groups</h2>
-                <ul id="groupList">
-                    <li class="groupItem"  value="222">groupname</li>
-                    <li class="groupItem"  value="">groupname2</li>
-                    <li class="groupItem" value="">groupname3</li>
-                </ul>
-            
-                
-        </div>
-        <div class="groupInfoDiv">
-            <h2 class="groupHeading groupChosen" id="selectedGroupHeading">groupHeading</h2>
-            
-            <h3 class="simpleHeading">Memory Jars</h3>
-            <ul id="memoryJars" class="list">
-                <li class="listItem" value="">Memoryjar1</li>
-                <li class="listItem" value="">Memoryjar2</li>
-                <li class="listItem" value="">Memoryjar3</li>
-            </ul>
-            
-            <h3 class="simpleHeading">Members</h3>
-            <ul id="membersList" class="list">
-                <li class="listItem" value="">Daniel Toledo</li>
-                <li class="listItem" value="">Sam Hegedus</li>
-                <li class="listItem" value="">Seth Polyniak</li>
-            </ul>
-        </div>
-    </div>  
-        
 -->
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    
+    
         
         
     </body>   

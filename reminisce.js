@@ -9,6 +9,19 @@ closeModal.onclick = function() {
     modal.style.display = 'none';
 }
 
+// Copy unique jar ID 
+function copy() {
+  
+    var copyText = document.getElementById("text-jar-id");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+}
+
 
 // USER CLICKS A GROUP
 // Change color of group item

@@ -1,22 +1,86 @@
 :root {
     --hover-color: lightgray;
-    --header-color: #e35f06;
+    --header-color: #169cc0;
+    --blue-hover: #1389a9;
     --slide-color: #1f1f1f;
     --subheading-color: #4a4a49;
+    --off-white: #f9fafc;
 }
 
 html {
-    background: #f9fafc; 
+    background: var(--off-white); 
 }
 
 body {
     margin: 0;
-    font-family: sans-serif;
-/*
-    background: linear-gradient(to bottom,#c4a8ed, white);
-    background-repeat: no-repeat;
-*/
+    margin-top: 70px;
+    font-family: 'Open Sans', sans-serif;
+}
 
+.white-panel {
+    width: 100%;
+    height: 500px;
+    
+    text-align: center;
+}
+
+.website-title {
+    text-align: center;
+    padding-top: 90px;
+    
+    font-size: 140px;
+    font-weight: 500;
+}
+
+.site-name {
+    color: var(--header-color);
+    letter-spacing: 1px;
+    font-family: 'Oleo Script','Open Sans';
+}
+
+.sub-heading {
+    text-align: center;
+    margin-top: -110px;
+    
+    color: var(--subheading-color);
+    font-size: 30px;
+    word-spacing: 2px;
+}
+
+.btn-start {
+    width: 200px;
+    height: 50px;
+    padding-bottom: 5px;
+    
+    color: var(--off-white);
+    background: var(--header-color);
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    
+    border-style: none;
+    outline: none;
+    border-radius: 25px;
+}
+
+.btn-start:hover {
+    background: var(--blue-hover);
+    cursor: pointer;    
+}
+
+.btn-close-about {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    
+    
+    font-size: 64px;
+    text-decoration: none;
+    color: #000;
+    
+}
+
+.btn-close-about:hover {
+    color: white;
 }
 
 .navHeading {
@@ -142,10 +206,25 @@ body {
 }
 
 /*The description headings*/
+.about-div {
+    background: #333;
+}
+
 .descriptionDiv {
    margin-top: 220px;
    display: block;
+   background: #333;
 }
+
+.cloud-img {
+   margin: auto;
+   margin-top: 20px;
+   display: block;
+    
+   width: 400px;
+}
+
+
 
 .headingsDiv {
     margin-left: 54px;
@@ -165,12 +244,34 @@ body {
   color: var(--subheading-color);
 }
 
+.how-div {
+    clear: both;
+    float: right;
+    width: 40%;
+    margin-right: 54px;
+    
+}
+
+.how-heading {
+  font-size: 40px;    
+  margin-bottom: 10px;
+  color: var(--header-color);
+}
+
+.how-subheading {
+  font-size: 22px;
+  margin-bottom: 100px;
+  color: var(--subheading-color);
+}
+
 .iconsList {
-    clear: left;
+    clear: both;
     list-style-type: none;
     width: 90%;
     margin: auto;
     text-align: center;
+    
+    background: var(--off-white);
 }
 
 .iconBox {
@@ -217,12 +318,20 @@ body {
     #slideMenuBtn {
         display: block;
     }
+
     /*Make home heading/subheading larger*/
-    .headingsDiv {
-        width: 70%;
-        margin-bottom: 20px;
+    .descriptionDiv {
+        margin-top: 150px;
     }
-    .heading {
+    .how-container {
+    }
+    
+    .headingsDiv, .how-div {
+        float:none;
+        width: 90%;
+        margin: auto;
+    }
+    .heading, .how-heading {
         font-size: 32px;
     }
     /*Stack and chang width% of icons*/
